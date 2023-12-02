@@ -1,6 +1,6 @@
 import React from 'react'
-import { PiShoppingCartLight } from "react-icons/pi"
 import { RostroPerfil } from './Pictures/RostroPerfil'
+import { CartWidget } from '../cartWidget/CartWidget.jsx'
 import './navbar.scss'
 
 export const Navbar = () => {
@@ -18,7 +18,7 @@ export const Navbar = () => {
       <div className='text-stone-50 w-1/3 min-w-min flex justify-end'>
         <div className='flex items-center'>
           <button><RostroPerfil /></button>
-          <button className='ms-4' href="#"><PiShoppingCartLight className='text-2xl'/></button>
+          <button className='ms-4' href="#"><CartWidget /></button>
         </div>
       </div>
     </nav>
