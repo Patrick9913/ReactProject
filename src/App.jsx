@@ -2,15 +2,18 @@ import { useState } from 'react'
 import { Navbar } from './components/navbar/Navbar.jsx'
 import { ItemListContainer } from './components/itemListContainer/ItemListContainer.jsx'
 import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <ItemListContainer title="Productos Destacados"/>
-    </>
+      <Routes>
+        <Route path='/' element={<ItemListContainer/>}/>
+        <Route path='/productos/:categoryName' element={ <ItemListContainer />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
