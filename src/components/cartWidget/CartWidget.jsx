@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { PiShoppingCartLight } from "react-icons/pi"
+import { CartContext } from '../../context/CartContext'
 
 
 export const CartWidget = () => {
+
+  const { itemsInCart } = useContext(CartContext)
+
   return (
-    <div className='relative'>
+    <div className=' flex'>
       <PiShoppingCartLight className='text-2xl'/>
-      <span className=' bg-red-700 text-stone-50 rounded-full absolute bottom-3 w-6 h-6 text-center'>13</span>
+      <span className='text-stone-50'>{itemsInCart()}</span>
     </div>
   )
 }

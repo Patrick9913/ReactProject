@@ -1,8 +1,9 @@
 import React from 'react';
 import { ItemCard } from '../itemCard/ItemCard.jsx';
 import { useState, useEffect } from 'react';
-import { pedirDatos } from '../../utils/utils.js';
 import { useParams } from 'react-router-dom';
+import { collection, doc, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 export const ItemListContainer = ({title}) => {
 
@@ -13,12 +14,23 @@ export const ItemListContainer = ({title}) => {
 
   useEffect(() => {
     setloading(true)
-    pedirDatos()
-      .then ((data) => {
-        const items = categoryName ? data.filter ((prod) => prod.category === categoryName) : data;
-        setProductos(items)
-        setloading(false)
-      })
+    const prodsRef = collection( db, 'productos')
+    const docsRef = categoryName
+                         ? query( prodsRef, where ('category', '==', categoryName))
+                         : prodsRef
+
+        getDocs(docsRef)
+            .then ((querySnapShot) => {
+                const docs = querySnapShot.docs.map(doc => {
+                    return {
+                        ...doc.data(),
+                        id: doc.id
+                    }
+                })
+                setProductos(docs)
+            })
+            .finally(() => setloading(false))
+
   }, [categoryName])
 
   return (

@@ -20,7 +20,7 @@ export const Navbar = () => {
       <div className='text-stone-50 w-1/3 min-w-min flex justify-end'>
         <div className='flex items-center'>
           <button><RostroPerfil /></button>
-          <button className='ms-4' href="#"><CartWidget /></button>
+          <button className='ms-4' href="#"><Link to="/cart"><CartWidget /></Link></button>
         </div>
       </div>
     </nav>
