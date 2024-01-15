@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 export const Navbar = () => {
 
   return (
-    <nav className='bg-sky-950 flex justify-center px-10'>
+    <nav className='bg-slate-800 flex justify-center px-10'>
       <h1 className='m-4 text-stone-50 w-1/3 min-w-min font-light'><Link to="/">CyberCart Haven</Link></h1>
       <div className='w-1/3 flex justify-center min-w-min'>
         <ul className='text-stone-50 flex items-center'>

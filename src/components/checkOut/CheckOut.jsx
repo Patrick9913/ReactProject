@@ -81,12 +81,12 @@ export const CheckOut = () => {
     }
 
     return (
-        <div className=" container m-auto mt-10">
-            <h2 className=" text-4xl">Checkout</h2>
+        <div className="container m-auto mt-10">
+            <h2 className="text-4xl mb-4">Checkout</h2>
             <hr />
             <form onSubmit={accionEnviar} className="flex flex-col gap-4 max-w-md mt-4">
                 <input 
-                    className="border p-2"
+                    className="border border-black p-2"
                     type="text"
                     placeholder="Nombre"
                     value={values.nombre}
@@ -94,7 +94,7 @@ export const CheckOut = () => {
                     name="nombre" 
                 />
                 <input
-                    className="border p-2" 
+                    className="border border-black p-2" 
                     type="text"
                     placeholder="Dirección"
                     value={values.direccion}
@@ -102,14 +102,14 @@ export const CheckOut = () => {
                     name="direccion" 
                 />
                 <input 
-                    className="border p-2"
+                    className="border border-black p-2"
                     type="email"
                     placeholder="Email"
                     value={values.email}
                     onChange={modificarValorInput}
                     name="email" 
                 />
-                <button type="submit" className="">Enviar</button>
+                <button type="submit" className=" border border-black py-2 w-36 hover:bg-black hover:text-stone-50 ease-in duration-150">Enviar</button>
             </form>
         </div>
     )

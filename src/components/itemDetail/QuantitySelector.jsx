@@ -12,9 +12,9 @@ export const QuantitySelector = ( {cantidad, setCantidad, stock } ) => {
 
     return (
         <div className="flex items-center">
-            <button onClick={accionRestar} className={"text-stone-50 p-2 w-9 rounded-md " + (cantidad === 1 ? "bg-slate-400 cursor-default" : "bg-sky-900" )}>-</button>
+            <button onClick={accionRestar} className={"border flex justify-center border-black px-4 py-2 w-9 hover:bg-black hover:text-stone-50 ease-in duration-150" + (cantidad === 1 ? " cursor-default bg-gray-700 text-stone-50" : "" )}>-</button>
             <span className="mr-3 ml-3">{cantidad}</span>
-            <button onClick={accionSumar} className={ "text-stone-50 p-2 w-9 rounded-md " + (cantidad === stock ? "bg-slate-400 cursor-default" : "bg-sky-900")}>+</button>
+            <button onClick={accionSumar} className={ "border flex justify-center border-black px-4 py-2 w-9 hover:bg-black hover:text-stone-50 ease-in duration-150" + (cantidad === stock ? " cursor-default bg-gray-700 text-stone-50" : "")}>+</button>
         </div>
     )
 }
