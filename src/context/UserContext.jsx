@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { auth, provider } from "../firebase/config";
-import { signInWithPopup, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithPopup, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider } from "firebase/auth";
+import Swal from "sweetalert2";
 
 
 export const UserContext = createContext()
@@ -13,28 +14,33 @@ export const UserProvider = ({children}) => {
         userId: null
     })
 
-    const login = (values) => {
-        signInWithEmailAndPassword ( auth, values.email, values.password )
-        .then((userCredencial) => {
-            const usuario = userCredencial.usuario
+    const login = async (values) => {
+        try {
+            await signInWithEmailAndPassword ( auth, values.email, values.password )
+
             setUser({
                 email: user.email,
-                log: true,
-                userId: user.userId
-            })
-        })
+                userId: user.uid,
+                log: true
+            });
+    
+            Swal.fire("Bienvenido");
+
+        } catch (error) {
+            setUser({
+                email: null,
+                log: false,
+                userId: null
+            });
+            Swal.fire("Los datos ingresados no existen")
+        }
     }
 
-    const register = (values) => {
-        createUserWithEmailAndPassword ( auth, values.email, values.password )
-        .then((userCredencial) => {
-            const usuario = userCredencial.usuario
-            setUser({
-                email: user.email,
-                log: true,
-                userId: user.userId
-            })
-        })
+    const register = async (values) => {
+
+        await createUserWithEmailAndPassword ( auth, values.email, values.password )
+
+        Swal.fire("Bienvenido a CyberCart Haven")
     }
 
     const logout = () => {

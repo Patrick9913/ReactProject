@@ -4,8 +4,12 @@ import { CartWidget } from '../cartWidget/CartWidget.jsx'
 import './navbar.scss'
 import { navLinks } from '../../Mocks/navlinks.js'
 import { Link } from 'react-router-dom'
+import { UserContext } from '../../context/UserContext.jsx'
+import { useContext } from 'react'
 
 export const Navbar = () => {
+
+  const { user, logout } = useContext(UserContext)
 
   return (
     <nav className='bg-slate-800 flex justify-center px-10'>
@@ -18,8 +22,13 @@ export const Navbar = () => {
         </ul> 
       </div>
       <div className='text-stone-50 w-1/3 min-w-min flex justify-end'>
-        <div className='flex items-center'>
+        <div className='flex gap-2 items-center'>
           <button><RostroPerfil /></button>
+          { user.log && 
+            <div className='flex gap-2'>
+              <p>{user.email}</p>
+              <button onClick={logout}>Cerrar Sesion</button>
+            </div> }
           <button className='ms-4' href="#"><Link to="/cart"><CartWidget /></Link></button>
         </div>
       </div>
