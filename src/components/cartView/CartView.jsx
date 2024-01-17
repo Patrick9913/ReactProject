@@ -30,7 +30,11 @@ export const CartView = () => {
             <div className=" flex items-center gap-8">
                 <h4 className=" mt-8 text-2xl">TOTAL: $ {totalCart()}</h4>
                 <button className=" text-xl font-thin mt-8 border border-black w-60 p-4 hover:bg-black hover:text-stone-50 ease-in duration-150" onClick={clearCart}>Vaciar Carro</button>
-                <button className=" text-xl font-thin mt-8 border border-black w-60 p-4 hover:bg-black hover:text-stone-50 ease-in duration-150"><Link to="/checkOut">Terminar Compra</Link></button>
+                { cart.length > 0 
+
+                    ? <button className=" text-xl font-thin mt-8 border border-black w-60 p-4 hover:bg-black hover:text-stone-50 ease-in duration-150"><Link to="/checkOut">Terminar Compra</Link></button> 
+                    : <button className=" text-xl font-thin mt-8 border border-black w-60 p-4 cursor-default" disabled>Terminar Compra</button> } 
+                
             </div>
         </section>
     )
