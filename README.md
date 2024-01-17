@@ -3,7 +3,7 @@
 ## CyberCart Haven 📖 : E-commerce. 
 Cybercart Haven es tu plataforma de comercio electrónico dedicada a la venta de muebles y artículos de decoración de alta calidad. Diseñado para proporcionar una experiencia de compra sin complicaciones y totalmente personalizada, Cybercart Haven ofrece una amplia gama de funcionalidades para satisfacer todas tus necesidades de decoración del hogar.
 
-![Flujo de navegación](src/assets/gifnavigation/gifnav.gif)
+![Flujo de navegación](src/assets/gifnavigation/gifnavigation.gif)
 
 ## Funcionalidades Clave
 
