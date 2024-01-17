@@ -6,19 +6,19 @@ Cybercart Haven es tu plataforma de comercio electrónico dedicada a la venta de
 ## Funcionalidades Clave
 
 #### **Inicio de Sesión y Registro de Usuario:**
-    Accede fácilmente: crea cuenta, inicia sesión o usa Google para explorar y comprar en Cybercart Haven.
+Accede fácilmente: crea cuenta, inicia sesión o usa Google para explorar y comprar en Cybercart Haven.
 ### **Exploración Intuitiva:**
-    Descubre muebles, mesas, accesorios y más con navegación sencilla en Cybercart Haven.
+Descubre muebles, mesas, accesorios y más con navegación sencilla en Cybercart Haven.
 ### **Filtros y Búsqueda Avanzada:**
-    Refina tu búsqueda utilizando categorías. Encuentra el artículo perfecto de manera rápida y sencilla.
+Refina tu búsqueda utilizando categorías. Encuentra el artículo perfecto de manera rápida y sencilla.
 ### **Vistas Detalladas del Producto:**
-    Examina cada artículo con detenimiento mediante imágenes de alta resolución, descripciones detalladas y especificaciones para tomar decisiones informadas.
+Examina cada artículo con detenimiento mediante imágenes de alta resolución, descripciones detalladas y especificaciones para tomar decisiones informadas.
 ### **Carrito de Compras:**
-    Agrega tus productos favoritos al carrito de compras con un solo clic. Revisa y ajusta las cantidades antes de proceder a la creación de la orden.
+Agrega tus productos favoritos al carrito de compras con un solo clic. Revisa y ajusta las cantidades antes de proceder a la creación de la orden.
 ### **Confirmación de Compra y Código de Orden:**
-    Después de realizar la compra, recibirás una confirmación junto con un código de orden único. Este código te permitirá rastrear tu pedido.
+Después de realizar la compra, recibirás una confirmación junto con un código de orden único. Este código te permitirá rastrear tu pedido.
 ### **Base de Datos:**
-    Los detalles de la orden de compra se almacenan en Firestore de Firebase para seguridad y eficiencia.
+Los detalles de la orden de compra se almacenan en Firestore de Firebase para seguridad y eficiencia.
 
 ## Tecnologías utilizadas 📖
 - **HTML5**
